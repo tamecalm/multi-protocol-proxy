@@ -291,6 +291,7 @@ func (s *Server) handleMethodNegotiationNoAuth(conn net.Conn) (string, error) {
 
 	conn.Write([]byte{Version5, MethodNoAuth})
 	return "", nil 
+}
 
 func (s *Server) authenticateUser(conn net.Conn) (string, error) {
 	buf := make([]byte, 2)

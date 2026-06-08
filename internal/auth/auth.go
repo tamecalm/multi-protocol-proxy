@@ -273,7 +273,8 @@ func (s *UserStore) CheckExpiry(username string) bool {
 
 	expiryTime, err := time.Parse(time.RFC3339, user.ExpiresAt)
 	if err != nil {
-		return true 
+		return true
+	}
 
 	return time.Now().Before(expiryTime)
 }
