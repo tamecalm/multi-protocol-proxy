@@ -1,0 +1,134 @@
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Binary output 
+/proxy
+/proxy.exe
+multi-protocol-proxy
+multi-protocol-proxy-linux
+multi-protocol-proxy-darwin
+multi-protocol-proxy-windows
+
+# Build output directory
+build/
+
+# Go workspace
+go.work
+go.work.sum
+
+# Vendor directory (if not committing deps)
+*.pem
+*.key
+*.crt
+*.csr
+*.p12
+*.pfx
+server.key
+server.crt
+
+# Configuration (Sensitive)
+config.json
+config.local.json
+config.*.json
+!config.example.json
+users.json
+!users.example.json
+
+# Environment files
+.env
+.env.*
+*.env
+
+# IDE & Editors
+.vscode/
+*.code-workspace
+
+# JetBrains (GoLand, IntelliJ)
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+.#*
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# OS Generated Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# Logs & Debug
+*.log
+*.log.*
+logs/
+debug/
+crash.log
+
+# Testing & Coverage
+coverage.out
+coverage.html
+*.cover
+*.prof
+cpu.prof
+mem.prof
+*.test
+
+# Docker (if applicable)
+.docker/
+docker-compose.override.yml
+
+# Misc
+tmp/
+temp/
+.cache/
+*.bak
+*.backup
+*.tmp
+agents/
+
+# Dependency directories
+node_modules/
+
+# Metrics data (if stored locally)
+metrics/
+data/
+
+# Generated documentation
+docs/_build/
+
+# Ngrok (contains authtoken - NEVER COMMIT)
+ngrok.yml
+ngrok/*.yml
+!ngrok/*.example
+!ngrok/*.yml.example
+
+# Local overrides
+*.local.json
+.env.local

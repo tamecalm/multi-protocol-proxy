@@ -1,0 +1,5 @@
+# Ignore actual config file (contains authtoken)
+ngrok.yml
+
+# Ignore any local ngrok state
+*.log

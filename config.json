@@ -1,0 +1,32 @@
+{
+  "listen": ":8443",
+  "cert_file": "certs/dev/server.crt",
+  "key_file": "certs/dev/server.key",
+  "timeout_sec": 300,
+  "max_conns": 1000,
+  "hosts": {
+    "chat.signal.org": "chat.signal.org:443",
+    "ud-chat.signal.org": "ud-chat.signal.org:443",
+    "storage.signal.org": "storage.signal.org:443",
+    "cdn.signal.org": "cdn.signal.org:443",
+    "cdn2.signal.org": "cdn2.signal.org:443",
+    "cdn3.signal.org": "cdn3.signal.org:443",
+    "cdsi.signal.org": "cdsi.signal.org:443",
+    "contentproxy.signal.org": "contentproxy.signal.org:443",
+    "sfu.voip.signal.org": "sfu.voip.signal.org:443",
+    "svr2.signal.org": "svr2.signal.org:443",
+    "updates.signal.org": "updates.signal.org:443",
+    "updates2.signal.org": "updates2.signal.org:443",
+    "whisper.signal.org": "whisper.signal.org:443",
+    "whisper-reg.signal.org": "whisper-reg.signal.org:443",
+    "directory.signal.org": "directory.signal.org:443",
+    "registration.signal.org": "registration.signal.org:443",
+    "backup.signal.org": "backup.signal.org:443",
+    "rufus.signal.org": "rufus.signal.org:443",
+    "undlr.signal.org": "undlr.signal.org:443",
+    "android-textproto.signal.org": "android-textproto.signal.org:443",
+    "provisioning.signal.org": "provisioning.signal.org:443",
+    "pair.signal.org": "pair.signal.org:443",
+    "ossignal.org": "ossignal.org:443"
+  }
+}

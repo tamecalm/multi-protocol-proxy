@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  proxy:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: tamecalm/multi-protocol-proxy:latest
+    container_name: multi-protocol-proxy
+    restart: unless-stopped
+    ports:
+      - "8080:8080" # HTTP Proxy & PAC
+      - "8443:8443" # HTTPS Proxy / SNI TLS Proxy
+      - "1080:1080" # SOCKS5 Proxy
+      - "9090:9090" # Metrics / Stats API
+    volumes:
+      # Mount users.json to persist credentials
+      - ./users.json:/opt/proxy/users.json
+      # Mount certificate directory for TLS termination
+      - ./certs:/opt/proxy/certs
+      # Mount local env file if present
+      - .env:/opt/proxy/.env
+    environment:
+      - APP_ENV=production
+      - PROXY_MODE=sni
+      - DOMAIN=proxy.yourdomain.com
+      - HTTP_PROXY_PORT=:8080
+      - HTTP_PROXY_TLS=true
+      - HTTP_PROXY_TLS_PORT=:8443
+      - SOCKS5_PORT=:1080
+      - METRICS_LISTEN=:9090
+      - USERS_FILE=/opt/proxy/users.json
+      - PAC_ENABLED=true
+      - PAC_DEFAULT_USER=admin

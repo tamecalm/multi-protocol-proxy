@@ -1,0 +1,44 @@
+{
+  "users": [
+    {
+      "username": "admin",
+      "role": "super_admin",
+      "password_hash": "$2a$10$REPLACE_WITH_ACTUAL_HASH",
+      "rate_limit_rpm": 0,
+      "enabled": true,
+      "plan": "admin",
+      "bandwidth_limit_gb": 0,
+      "bandwidth_speed_mbps": 0,
+      "max_connections": 0,
+      "expires_at": ""
+    },
+    {
+      "username": "customer1",
+      "role": "user",
+      "password_hash": "$2a$10$REPLACE_WITH_ACTUAL_HASH",
+      "rate_limit_rpm": 500,
+      "enabled": true,
+      "plan": "starter",
+      "bandwidth_limit_gb": 50,
+      "bandwidth_speed_mbps": 0,
+      "max_connections": 10,
+      "expires_at": "2026-03-19T00:00:00Z"
+    },
+    {
+      "username": "premium_user",
+      "role": "user",
+      "password_hash": "$2a$10$REPLACE_WITH_ACTUAL_HASH",
+      "rate_limit_rpm": 0,
+      "enabled": true,
+      "plan": "enterprise",
+      "bandwidth_limit_gb": 0,
+      "bandwidth_speed_mbps": 0,
+      "max_connections": 0,
+      "expires_at": ""
+    }
+  ],
+  "ip_whitelist": [],
+  "super_admin_ips": [
+    "0.0.0.0/0"
+  ]
+}
