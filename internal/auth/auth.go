@@ -85,7 +85,6 @@ func (s *UserStore) LoadFromFile(path string) error {
 		user := &cfg.Users[i]
 		if user.Enabled {
 			s.users[strings.ToLower(user.Username)] = user
-			// Initialize rate limiter for user
 			if user.RateLimitRPM > 0 {
 				s.rateLimiter.SetLimit(user.Username, user.RateLimitRPM)
 			}
@@ -188,7 +187,6 @@ func (s *UserStore) CheckIPAllowed(ipStr string) bool {
 		var err error
 		host, _, err = net.SplitHostPort(ipStr)
 		if err != nil {
-			// Might be IPv6 without port
 			host = ipStr
 		}
 	}
