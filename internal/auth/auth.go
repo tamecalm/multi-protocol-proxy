@@ -151,7 +151,7 @@ func (s *UserStore) ValidateCredentials(username, password string) (*User, bool)
 		validUntil: time.Now().Add(credCacheTTL),
 	}
 	s.credCacheMu.Unlock()
-
+	
 	return user, true
 }
 
